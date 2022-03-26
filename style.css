@@ -1,3 +1,21 @@
+* {
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
 body {
+  font: 18px/1.5 ariel helvetica sans-serif;
   margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: auto;
+  width: 40%;
+}
+
+.inner-book-holder {
+  border-bottom: 1px solid black;
+  padding-bottom: 8px;
 }
