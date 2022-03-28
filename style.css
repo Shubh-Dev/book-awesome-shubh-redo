@@ -19,3 +19,9 @@ body {
   border-bottom: 1px solid black;
   padding-bottom: 8px;
 }
+
+.inner-container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid red;
+}
