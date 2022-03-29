@@ -10,18 +10,91 @@ body {
   padding: 0;
 }
 
+.header-content {
+  display: flex;
+  padding: 0 40px 5px 40px;
+  justify-content: space-between;
+  border: 3px solid black;
+  margin: 7px 10px 5px 10px;
+}
+
+  .main-headline a h3 {
+    color: black;
+}
+
+.nav-ul {
+  display: flex;
+  gap: 20px;
+
+}
+
+.nav-ul li {
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+
+.title-holder,
+.author-holder {
+  width: 100%;
+  height: 30px;
+  border: 2px solid black;
+  font-size: large;
+  padding-left: 5px;
+}
+
+.main-btn {
+  float: right;
+  margin-top: 20px;
+  width: 70px;
+  height: 30px;
+  border: 3px solid black;
+}
+
 .container {
   margin: auto;
-  width: 40%;
+  width: 50%;
+  text-align: center;
+}
+
+.book-container {
+  margin-top: 10vh;
 }
 
 .inner-book-holder {
   border-bottom: 1px solid black;
   padding-bottom: 8px;
+  height: 50px;
+}
+
+.inner-button {
+  height: 30px;
+  margin-top: 17px;
+  border: 2px black solid;
+
 }
 
 .inner-container {
   display: flex;
   justify-content: space-between;
-  border: 1px solid red;
+  border: 2px solid #000;
+  margin-bottom: 5px;
+  padding: 0 20px 0 20px;
 }
+
+.section-1,
+.section-3 {
+  display: none;
+  margin-top: 10vh;
+  
+}
+
+span {
+  font-weight: bolder;
+}
+
+footer {
+  border-top: 2px solid black;
+}
+

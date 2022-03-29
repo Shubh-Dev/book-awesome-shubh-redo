@@ -1,16 +1,11 @@
-class Books {
-  constructor(title, author) {
-      this.title = title;
-      this.author = author;
-      this.id = Date.now();
-  };
-};
-const bookTitle = document.querySelector('.title-holder');
-const bookAuthor = document.querySelector('.author-holder');
-const addButton = document.querySelector('.main-btn');
-const bookContainer  = document.querySelector('.book-container')
+ import { Books } from "./class.js";
+ 
+ const bookTitle = document.querySelector('.title-holder');
+ const bookAuthor = document.querySelector('.author-holder');
+ const addButton = document.querySelector('.main-btn');
+ const bookContainer  = document.querySelector('.book-container')
 
-class BookMethods {
+export class BookMethods {
     constructor() {
         this.list = JSON.parse(localStorage.getItem('bookData'))|| [];
     };
@@ -24,7 +19,7 @@ class BookMethods {
             this.displayBook(bookTitle.value, bookAuthor.value);
 
         });
-        // localStorage.setItem('bookData', JSON.stringify(this.list));
+        localStorage.setItem('bookData', JSON.stringify(this.list));
         this.localstorage();
     };
 
@@ -36,12 +31,18 @@ class BookMethods {
         const removeBook = document.querySelectorAll('.inner-button');
         removeBook.forEach((button) => {
             button.addEventListener('click', () => {
-                this.list = this.list.filter((book) => {
-                    book.id !== button.id;
-                })
+            this.list = this.list.filter((book) => 
+                    book.id !== Number(button.id),
+            );
+                
+                bookContainer.innerHTML = "";
+                this.list.forEach((book) => {
+                this.displayBook(book.title, book.author, book.id);
+                });
+                localStorage.setItem('bookData', JSON.stringify(this.list));
             });
         });
-        // localStorage.setItem('bookData', JSON.stringify(this.list));
+        localStorage.setItem('bookData', JSON.stringify(this.list));
     };
     localstorage() {
         if(localStorage !== null) {
@@ -53,7 +54,3 @@ class BookMethods {
     };
 
 };
-
-const newBookMethod = new BookMethods();
-newBookMethod.addBook();
-
