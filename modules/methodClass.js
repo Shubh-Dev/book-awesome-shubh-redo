@@ -24,8 +24,11 @@ export class BookMethods {
     };
 
     displayBook(title, author, id) {
+        if(title === "" || author === "") {
+            return;
+         };
         bookContainer.innerHTML += `<div class="inner-container"> 
-        <p>${title} by ${author}</p>
+        <p class="inner-para">${title} <span class="inner-span">by</span> ${author}</p>
         <button class = 'inner-button' id=${id}>Remove</button>
         </div>`
         const removeBook = document.querySelectorAll('.inner-button');

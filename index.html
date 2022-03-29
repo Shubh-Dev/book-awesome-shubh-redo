@@ -7,19 +7,21 @@
     <title>Book | Awesome</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<header>
-    <div class="header-content">
-       <div class="main-headline"><a href="index.html"><h3>Awesome Books</h3></a></div>
-        <ul class = "nav-ul">
-          <li class="books-list">List</li>
-          <li class="add-book">Add new</li>
-          <li class="contact">Contact</li>
-        </ul>
-    </div>
-</header>
 <body>
-   <div class="container">
+    <header>
+        <div class="header-content">
+           <div class="main-headline"><a href="index.html"><h3>Awesome Books</h3></a></div>
+            <ul class = "nav-ul">
+              <li class="books-list">List</li>
+              <li class="add-book">Add new</li>
+              <li class="contact">Contact</li>
+            </ul>
+        </div>
+    </header>
+    <div class="date"></div>
+    <div class="container">
         <section class = "section-1"> 
+            <h2>Book List</h2>
        <div class="book-container"> </div>
        </section>
 
@@ -29,7 +31,7 @@
            <form class="main-form">
                <input type="text" placeholder="Title" class="title-holder"> <br> <br> 
                <input type="text" placeholder="Author" class="author-holder"> <br>
-               <button class = 'main-btn'>Add</button>
+               <button type="button" class = 'main-btn'>Add</button>
            </form>
        </div>
     </section>
@@ -46,6 +48,11 @@
         </ul>
     </section>
    </div>
-   <script src="index.js" type="module"></script>
+ <footer>
+     
+         <p>Awesome Books, &copy; All rights reserved</p>
+     
+ </footer>
+    <script src="index.js" type="module"></script>  
 </body>
 </html>
