@@ -5,7 +5,7 @@
 }
 
 body {
-  font: 18px/1.5 ariel helvetica sans-serif;
+  font: 18px/1.5 arial, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -18,14 +18,13 @@ body {
   margin: 7px 10px 5px 10px;
 }
 
-  .main-headline a h3 {
-    color: black;
+.main-headline a h3 {
+  color: black;
 }
 
 .nav-ul {
   display: flex;
   gap: 20px;
-
 }
 
 .nav-ul li {
@@ -33,7 +32,6 @@ body {
   font-weight: bolder;
   cursor: pointer;
 }
-
 
 .title-holder,
 .author-holder {
@@ -56,10 +54,11 @@ body {
   margin: auto;
   width: 50%;
   text-align: center;
+  min-height: 90vh;
 }
 
 .book-container {
-  margin-top: 10vh;
+  margin-top: 4vh;
 }
 
 .inner-book-holder {
@@ -72,7 +71,6 @@ body {
   height: 30px;
   margin-top: 17px;
   border: 2px black solid;
-
 }
 
 .inner-container {
@@ -86,8 +84,6 @@ body {
 .section-1,
 .section-3 {
   display: none;
-  margin-top: 5vh;
-  
 }
 
 span {
@@ -106,7 +102,7 @@ span {
 footer {
   width: 96%;
   position: absolute;
-  bottom: 7px;
+  margin-bottom: 0;
   border: 2px solid black;
   text-align: center;
   left: 30px;
