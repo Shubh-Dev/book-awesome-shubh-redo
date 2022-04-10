@@ -5,7 +5,7 @@ const bookAuthor = document.querySelector('.author-holder');
 const addButton = document.querySelector('.main-btn');
 const bookContainer = document.querySelector('.book-container');
 
-export default class BookMethods {
+ export default class BookMethods {
   constructor() {
     this.list = JSON.parse(localStorage.getItem('bookData')) || [];
   }
